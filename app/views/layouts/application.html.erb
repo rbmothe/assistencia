@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sistemas</title>
+
+<%= stylesheet_link_tag :application %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+<div id='wrapper'>
+  <div id='header-wrapper'>
+    <div id='header'>
+      <div id='logo'>
+       
+                                <p>Gerenciamento Celular </p>
+      </div>
+         <div id = 'menu'>
+            <ul>
+             
+             <li><%= link_to 'Cliente',clientes_path %></li>
+             <li><%= link_to 'Tecnico',tecnicos_path %></li>
+	     <li><%= link_to 'Celular',celulares_path %></li>
+
+
+			</ul>
+			</div>
+
+			
+	
+
+		</div>
+		
+	</div>
+     <div id='page'>
+
+       <div id='page-bgtop'>
+        <div id='page-bgbtm'>
+        <%= yield %>
+          <div style='clear: both;'> </div>
+        </div>
+      </div>
+
+     </div>
+
+ </div>
+</body>
+</html>

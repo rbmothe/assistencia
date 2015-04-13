@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @celular.cliente %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @celular.imei %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @celular.marca %>
+</p>
+
+<p>
+  <strong>Numserie:</strong>
+  <%= @celular.numserie %>
+</p>
+
+<%= link_to 'Edit', edit_celular_path(@celular) %> |
+<%= link_to 'Back', celulares_path %>

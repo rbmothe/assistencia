@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Celulares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Imei</th>
+      <th>Marca</th>
+      <th>Numserie</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @celulares.each do |celular| %>
+      <tr>
+        <td><%= celular.cliente %></td>
+        <td><%= celular.imei %></td>
+        <td><%= celular.marca %></td>
+        <td><%= celular.numserie %></td>
+        <td><%= link_to 'Show', celular %></td>
+        <td><%= link_to 'Edit', edit_celular_path(celular) %></td>
+        <td><%= link_to 'Excluir', celular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Celular', new_celular_path %>

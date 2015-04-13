@@ -1,0 +1,14 @@
+<%= simple_form_for(@celular) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :cliente %>
+    <%= f.input :imei %>
+    <%= f.input :marca %>
+    <%= f.input :numserie %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Salvar' %>
+  </div>
+<% end %>

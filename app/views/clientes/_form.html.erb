@@ -1,0 +1,14 @@
+<%= simple_form_for(@cliente) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nome %>
+    <%= f.input :cpf %>
+    <%= f.input :endereco, label:'Endereço' %>
+    <%= f.input :telefone %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Salvar' %>
+  </div>
+<% end %>
